@@ -1,0 +1,12 @@
+'use strict';
+var composite_1 = require('./composite');
+var composite_2 = require('./composite');
+var managerStephy = new composite_1.Manager('Stephy', 123);
+var managerThomas = new composite_1.Manager('Thomas', 1234);
+var employeeThomas = new composite_2.Employee('Thomas', 24);
+var employeePhillip = new composite_2.Employee('Phillip', 2345);
+managerThomas.add(employeeThomas);
+managerThomas.add(employeePhillip);
+managerStephy.add(managerThomas);
+console.log(managerStephy.getNumberOfEmployees());
+managerStephy.print();
