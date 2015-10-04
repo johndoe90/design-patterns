@@ -1,7 +1,5 @@
 var gulp = require('gulp');
-var shell = require('gulp-shell');
 var tsc = require('gulp-typescript');
-var typescript = require('typescript');
 
 const SOURCES = 'patterns';
 const TS_FILES = SOURCES + '/**/*.ts';
@@ -11,8 +9,7 @@ gulp.task('ts', function() {
 		.src(TS_FILES)
 		.pipe(tsc({
 			target: 'ES5',
-			module: 'commonjs',
-			typescript: typescript
+			module: 'commonjs'
 		}))
 		.pipe(gulp.dest(SOURCES));
 });
