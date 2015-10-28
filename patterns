@@ -1,0 +1,51 @@
+1. Behavioral
+
+1.1 Mediator Pattern
+
+	Usecase: 
+  	--> used to handle complex communication between objects
+  	--> if the objects that have to interact with each other should or cannot 
+  			know from each other (loose coupling)
+ 
+  Advantage:
+  	--> all communication is handled by the mediator and the subjects dont need to
+  			know anything about each other
+  	--> centralized point where communication between subjects is defined
+  	--> you can change the type of communication by simply creating a new mediator
+  			without having to change the subjects code
+
+2. Creational 
+
+2.1 Factory 
+
+  Usecase: 
+    --> when all all of the potential classes are in the same subclass hierarchy
+    --> when you dont know ahead of time what class object you need
+
+  Advantage:
+    --> centralize class selection code
+    --> encapsulate object creation
+    --> the client does not have to know all the subclasses
+
+2.2 Abstract Factory
+
+  Usecase:
+  --> a system should be independent of how its products are created, composed,
+      and represented
+  --> a system should be configured with one of multiple families of products
+  --> a family of related product objects is designed to be used together, and
+      you need to enforce this constraint
+  --> you want to provide a class library of products, and you want to reveal
+       just their interfaces, not their implementations
+ 
+  Advantage:
+    --> it isolates concrete classes (the client only works with the abstraction
+      and has no idea of the concrete implementation)
+    --> it makes exchanging product families easy
+    --> it promotes consistency among products ( only products of the same family 
+      will be used ie no kamels and ferns )
+ 
+  Disadvantage:
+    --> supporting new kinds of products is difficult since you have to change the 
+      interface of the abstract factory which means you have to change pretty much
+      everything
