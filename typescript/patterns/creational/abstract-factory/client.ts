@@ -1,4 +1,7 @@
 /**
+ * Provide an interface for creating families of related or dependent objects without
+ * specifying their concrete classes
+ * 
  * Usecase:
  * 	--> a system should be independent of how its products are created, composed,
  * 			and represented

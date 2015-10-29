@@ -2,6 +2,10 @@
 
 1.1 Mediator Pattern
 
+  Define an object that encapsulates how a set of objects interact.Mediator promotes
+  loose coupling by keeping objects from referring toeach other explicitly, and
+  it lets you vary their interactionindependently
+
 	Usecase: 
   	--> used to handle complex communication between objects
   	--> if the objects that have to interact with each other should or cannot 
@@ -14,12 +18,12 @@
   	--> you can change the type of communication by simply creating a new mediator
   			without having to change the subjects code
 
-1.2
+1.2 Strategy
 
-  Usecase:
-    --> Define a family of algorithms, encapsulate each one, and make theminterchangeable.
-        Strategy lets the algorithm vary independently fromclients that use it.
-     
+  Define a family of algorithms, encapsulate each one, and make theminterchangeable.
+  Strategy lets the algorithm vary independently fromclients that use it
+
+  Usecase:     
     --> many related classes differ only in their behavior. Strategies provide a
         way to configure a class with one of many behaviors.
  
@@ -55,6 +59,9 @@
 
 2.2 Abstract Factory
 
+  Provide an interface for creating families of related or dependent objects without
+  specifying their concrete classes
+
   Usecase:
   --> a system should be independent of how its products are created, composed,
       and represented
@@ -87,3 +94,16 @@
  
     --> the construction process must allow different representations for the 
         object that's constructed
+
+2.4 Singleton
+
+  Ensure a class only has one instance, and provide a global point of access to 
+  it
+
+  Usecase:
+    --> there must be exactly one instance of a class, and it must be accessible 
+        to clients from a well-known access point
+
+    --> when the sole instance should be extensible by subclassing, and clients 
+        should be able to use an extended instance without modifying their code
+

@@ -1,4 +1,8 @@
 /**
+ * Define an object that encapsulates how a set of objects interact.Mediator promotes
+ * loose coupling by keeping objects from referring toeach other explicitly, and
+ * it lets you vary their interactionindependently
+ * 
  * Usecase: 
  * 	--> used to handle complex communication between objects
  * 	--> if the objects should or cannot know from each other (loose coupling)
