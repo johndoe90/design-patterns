@@ -75,3 +75,15 @@
     --> supporting new kinds of products is difficult since you have to change the 
       interface of the abstract factory which means you have to change pretty much
       everything
+
+2.3 Builder
+
+  Separate the construction of a complex object from its representation so that
+  the same construction process can create different representations.
+ 
+  Usecase:
+    --> the algorithm for creating a complex object should be independent of the 
+        parts that make up the object and how they're assembled
+ 
+    --> the construction process must allow different representations for the 
+        object that's constructed
