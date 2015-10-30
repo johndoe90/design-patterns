@@ -111,12 +111,29 @@
 
 3.1 Composite
 
- Compose objects into tree structures to represent part-whole hierarchies.
- Composite lets clients treat individual objects and compositions of objects
- uniformly
+  Compose objects into tree structures to represent part-whole hierarchies.
+  Composite lets clients treat individual objects and compositions of objects
+  uniformly
 
- Usecase:
+  Usecase:
     --> you want to represent part-whole hierarchies of objects
     --> you want clients to be able to ignore the difference between compositions
         of objects and individual objects. Clients will treat all objects in the
         composite structure uniformly
+
+3.2 Bridge
+
+  Decouple an abstraction from its implementation so that the two can vary 
+  independently
+
+  Usecase:
+    --> you want to avoid a permanent binding between an abstraction and its
+        implementation. This might be the case, for example, when the implementation
+        must be selected or switched at run-time
+    --> both the abstractions and their implementations should be extensible by 
+        subclassing. In this case, the Bridge pattern lets you combine the different 
+        abstractions and implementations and extend them independently
+    --> you have a proliferation (starke vermehrung) of classes as shown earlier in 
+        the first Motivation diagram. Such a class hierarchy indicates the need for 
+        splitting an object into two parts. Rumbaugh uses the term "nested generalizations" 
+        [RBP+91] to refer to such class hierarchies
