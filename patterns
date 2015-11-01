@@ -86,6 +86,19 @@
          separate class. This lets you treat the object'sstate as an object in its
          own right that can vary independently fromother objects
 
+1.5 Chain of Responsibility
+
+  Avoid coupling the sender of a request to its receiver by giving morethan one
+  object a chance to handle the request. Chain the receivingobjects and pass the
+  request along the chain until an objecthandles it
+ 
+  Usecase:
+     --> more than one object may handle a request, and the handler isn't knowna
+         priori. The handler should be ascertained automatically
+     --> you want to issue a request to one of several objects withoutspecifying
+         the receiver explicitly
+     --> the set of objects that can handle a request should be specifieddynamically
+
 2. Creational 
 
 2.1 Factory 
