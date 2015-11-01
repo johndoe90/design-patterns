@@ -86,7 +86,7 @@
          separate class. This lets you treat the object'sstate as an object in its
          own right that can vary independently fromother objects
 
-1.5 Chain of Responsibility
+1.6 Chain of Responsibility
 
   Avoid coupling the sender of a request to its receiver by giving morethan one
   object a chance to handle the request. Chain the receivingobjects and pass the
@@ -98,6 +98,28 @@
      --> you want to issue a request to one of several objects withoutspecifying
          the receiver explicitly
      --> the set of objects that can handle a request should be specifieddynamically
+
+1.7 Visitor
+
+  Represent an operation to be performed on the elements of an objectstructure.
+  Visitor lets you define a new operation without changing the classes of the elements
+  on which it operates
+ 
+  Usecase:
+     --> an object structure contains many classes of objects with differing
+         interfaces, and you want to perform operations on these objects that depend
+         on their concrete classes
+     --> many distinct and unrelated operations need to be performed on objectsin
+         an object structure, and you want to avoid "polluting" theirclasses with
+         these operations. Visitor lets you keep related operationstogether by
+         defining them in one class. When the object structure isshared by many
+         applications, use Visitor to put operations in just thoseapplications that
+         need them
+     --> the classes defining the object structure rarely change, but you oftenwant
+         to define new operations over the structure. Changing the objectstructure
+         classes requires redefining the interface to all visitors,which is
+         potentially costly. If the object structure classes changeoften, then it's
+         probably better to define the operations in those classes
 
 2. Creational 
 
